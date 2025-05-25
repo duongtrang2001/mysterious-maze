@@ -4,7 +4,96 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mê cung bí ẩn</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://kit.fontawesome.com/ba993b4f63.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./styles.css" />
     </head>
-    <body></body>
+    <body>
+        <header id="header">
+            <h1 class="title">Mê cung bí ẩn</h1>
+        </header>
+        <div id="main">
+            <dialog id="dialog-instruct">
+                <h2>Chào mừng bạn đến với Mê cung bí ẩn</h2>
+                <p>
+                    Hướng dẫn: Trò chơi bao gồm các lối đi, tường ẩn và vật cản ẩn. Hãy bắt đầu bằng cách rê chuột từ ô
+                    "Start" và cố gắng vượt qua các chướng ngại vật để hoàn thành thử thách. <br />
+                    Khi nhấn sẵn sàng sau 3 giây trò chơi sẽ bắt đầu.
+                </p>
+                <p>Chúc bạn may mắn!</p>
+                <button id="start-btn">Sẵn sàng</button>
+            </dialog>
+            <div id="maze">
+                <div class="cell wall"></div>
+                <div class="cell wall"></div>
+                <div class="cell wall"></div>
+                <div class="cell wall"></div>
+                <div class="cell wall"></div>
+                <div class="cell wall"></div>
+                <div class="cell wall"></div>
+
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell trap"></div>
+                <div class="cell path"></div>
+                <div class="cell path"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell path"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell trap"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+                <div class="cell path"></div>
+                <div class="cell wall"></div>
+
+                <div class="cell wall"></div>
+                <div class="cell start"></div>
+                <div class="cell wall"></div>
+                <div class="cell wall"></div>
+                <div class="cell wall"></div>
+                <div class="cell finish"></div>
+                <div class="cell wall"></div>
+
+                <p class="text-start">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    Start
+                </p>
+                <p class="text-finish">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Finish
+                </p>
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
 </html>

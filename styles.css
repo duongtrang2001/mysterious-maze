@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --cell-width: 60px;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+#header .title {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#maze {
+    display: grid;
+    grid-template-columns: repeat(7, var(--cell-width));
+    grid-template-rows: repeat(7, var(--cell-width));
+    gap: 1px;
+    width: fit-content;
+    border: 2px solid #ffa500;
+    background-color: #ffffff;
+    border-radius: 2px;
+    position: relative;
+}
+
+.cell {
+    width: var(--cell-width);
+    height: var(--cell-width);
+    border-radius: 2px;
+    outline: 1px solid #cacaca;
+}
+
+.text-start,
+.text-finish {
+    position: absolute;
+    width: var(--cell-width);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    bottom: -50px;
+}
+
+.text-start {
+    left: var(--cell-width);
+}
+
+.text-finish {
+    right: var(--cell-width);
+    color: #ffc107;
+}
+
+/* DIALOG INSTRUCT */
+
+#dialog-instruct {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    background-color: #fffdd0;
+    color: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 6px;
+    border: none;
+    animation: fadeIn linear 0.2s;
+}
+
+#dialog-instruct h2 {
+    margin-bottom: 12px;
+}
+
+#dialog-instruct button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 8px 12px;
+    border: 1px solid #4a4a4a;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#dialog-instruct button:hover {
+    color: #ffffff;
+    border-color: #00ff7f;
+    background-color: #00ff7f;
+}
+
+#dialog-instruct::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        top: 60%;
+    }
+
+    to {
+        opacity: 1;
+        top: 50%;
+    }
+}
